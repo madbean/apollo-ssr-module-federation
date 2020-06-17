@@ -28,4 +28,4 @@ const CheckoutPage = () => {
   );
 };
 
-ReactDOM.render(<CheckoutPage />, document.getElementById("app"));
+ReactDOM.hydrate(<CheckoutPage />, document.getElementById("app"));

@@ -26,4 +26,4 @@ const SearchPage = () => (
   </Provider>
 );
 
-ReactDOM.render(<SearchPage />, document.getElementById("app"));
+ReactDOM.hydrate(<SearchPage />, document.getElementById("app"));

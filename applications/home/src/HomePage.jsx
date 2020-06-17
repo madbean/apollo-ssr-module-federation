@@ -26,4 +26,4 @@ const HomePage = () => (
   </Provider>
 );
 
-ReactDOM.render(<HomePage />, document.getElementById("app"));
+ReactDOM.hydrate(<HomePage />, document.getElementById("app"));
