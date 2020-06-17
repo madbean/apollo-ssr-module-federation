@@ -62,6 +62,8 @@ module.exports = {
         "apollo-boost",
         "graphql",
         "@apollo/react-hoc",
+        "@apollo/react-ssr",
+        "apollo-cache-inmemory",
       ],
     }),
     new DashboardPlugin({

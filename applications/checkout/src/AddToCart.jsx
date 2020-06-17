@@ -10,7 +10,7 @@ const AddToCart = ({ pokemon, addToCart }) => (
     onClick={() => addToCart(pokemon)}
     style={{ width: "100%" }}
   >
-    Add To Cart
+    Add To Cart !
   </Button>
 );
 
