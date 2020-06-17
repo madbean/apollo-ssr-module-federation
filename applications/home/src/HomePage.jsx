@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import { InMemoryCache } from 'apollo-cache-inmemory';
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import Frame from "./Frame";
 import store from "checkout/store";
@@ -19,7 +19,9 @@ const client = new ApolloClient({
 const HomePage = () => (
   <Provider store={store}>
     <ApolloProvider client={client}>
-      <Frame page="home" />
+      <BrowserRouter>
+        <Frame page="home" />
+      </BrowserRouter>
     </ApolloProvider>
   </Provider>
 );

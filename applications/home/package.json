@@ -25,11 +25,14 @@
     "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
+    "@apollo/react-common": "^3.1.4",
     "@apollo/react-hoc": "^3.1.5",
     "@apollo/react-hooks": "^3.1.5",
     "@apollo/react-ssr": "^3.1.5",
     "apollo-boost": "^0.4.9",
     "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link-http": "^1.5.17",
     "bootstrap": "^4.5.0",
     "graphql": "^15.1.0",
     "react": "^16.13.0",
@@ -38,6 +41,7 @@
     "react-dom": "^16.13.0",
     "react-query": "^1.5.7",
     "react-redux": "^7.2.0",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5"
   }

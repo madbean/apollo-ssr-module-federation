@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { connect } from "react-redux";
 import { Cart } from "react-bootstrap-icons";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 const Home = React.lazy(() => import("home/Home"));
 const Search = React.lazy(() => import("search/Search"));
@@ -66,24 +66,22 @@ const Navigation = ({ items }) => (
 );
 
 const Frame = ({ items = [], page = "home" }) => (
-  <BrowserRouter>
+  <Container>
+    <Navigation items={items} />
     <Container>
-      <Navigation items={items} />
-      <Container>
-        <Switch>
-          <Route path="/" exact>
-            <HomeRoute />
-          </Route>
-          <Route path="/search">
-            <SearchRoute />
-          </Route>
-          <Route path="/checkout">
-            <CheckoutRoute />
-          </Route>
-        </Switch>
-      </Container>
+      <Switch>
+        <Route path="/" exact>
+          <HomeRoute />
+        </Route>
+        <Route path="/search">
+          <SearchRoute />
+        </Route>
+        <Route path="/checkout">
+          <CheckoutRoute />
+        </Route>
+      </Switch>
     </Container>
-  </BrowserRouter>
+  </Container>
 );
 
 export default connect((state) => state)(Frame);
